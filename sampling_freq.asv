@@ -1,0 +1,31 @@
+% Sampling of Cosine Wave with Single Frequency
+
+% Define parameters
+frequency = 5; % Frequency of the cosine wave
+sampling_rate = 100; % Sampling rate
+
+% Time vector
+t = 0:1/sampling_rate:2; % 2 seconds duration
+l = length(t);
+m = (0:1:(length(t)-1)/2) / sampling_rate;
+% Continuous cosine wave
+continuous_cosine = cos(2 * pi * frequency * t);
+
+% Sampled cosine wave
+sampled_cosine = cos(2 * pi * frequency * (0:1:(length(t)-1)/2) / sampling_rate);
+
+% Plot continuous and sampled cosine waves
+figure;
+subplot(2, 1, 1);
+plot(t, continuous_cosine);
+title('Continuous Cosine Wave');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+subplot(2, 1, 2);
+stem((0:1:(length(t)-1)/2) / sampling_rate, sampled_cosine);
+title('Sampled Cosine Wave');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
