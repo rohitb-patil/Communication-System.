@@ -28,4 +28,4 @@
 
 - ***squaremodulation.m*** : Implements square modulation, another modulation technique used in communication systems.
 
-##Please refer to individual files for more detailed comments and explanations on the implemented algorithms and techniques.
+## Please refer to individual files for more detailed comments and explanations on the implemented algorithms and techniques.
